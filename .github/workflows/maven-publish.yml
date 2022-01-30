@@ -30,6 +30,6 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         # Email that you use with heroku
         heroku_email: ${{secrets.EMAIL}}
-        # The appname to use for deploying/updating
+        # The appname to use for deploying/updating as
         heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
         # An optional buildpack to use when creating the heroku application
