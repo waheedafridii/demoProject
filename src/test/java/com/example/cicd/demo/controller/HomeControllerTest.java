@@ -24,7 +24,17 @@ public class HomeControllerTest {
     void helloWorldAPITest() throws Exception{
 
         //when
-        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/").contentType(MediaType.APPLICATION_JSON)).andReturn();
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/hello").contentType(MediaType.APPLICATION_JSON)).andReturn();
+
+        //Then
+        assertThat(result.getResponse().getStatus()).isEqualTo(HttpStatus.OK.value());
+    }
+
+    @Test
+    void helloTestingAPITest() throws Exception{
+
+        //when
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/testing").contentType(MediaType.APPLICATION_JSON)).andReturn();
 
         //Then
         assertThat(result.getResponse().getStatus()).isEqualTo(HttpStatus.OK.value());
