@@ -20,9 +20,5 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: 'maven'
-
-    - name: Build with Maven
-      run: mvn clean install -DskipTests
-
     - name: Unit Tests
       run: mvn clean test
